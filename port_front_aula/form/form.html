@@ -1,78 +1,77 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formulário de contato</title>
-    <link rel="stylesheet" href="form.css">
+    <title>Formulario de Contato</title>
+    <!-- <link rel="stylesheet" href="../portifolio final/style.css"> -->
+    <link rel="stylesheet" href="Formulario.css">
 </head>
 <body>
-    <table>
-        
+    <table> <!-- Tabela -->
         <tr>
+            <td class="tab_from">
+                <form action="" method="post" onsubmit="contato.Enviar(event)">
 
-            <td class="tabForm">
-                <form action="" method="post" onsubmit="contato.Enviar()">
-                    <br>
-                    <label for="Nome">Nome</label>
-                    <input type="text" name="Nome" id="Nome" class="inINf" >                  
-                    <br>
-                    <label for="Gmail">Gmail</label>
-                    <input type="email" name="Gmail" id="Gmail" class="inINf" >                   
-                    <br>
-                    <label for="Phone">Telefone</label>
-                    <input type="tel" name="Phone" id="Phone" class="inINf" >
-                    <br>
-                    <label for="mensagem">Mensagem</label>                    
-                    <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea>
-                    <br>
-                    <label for="Idade">Idade</label>
-                    <input type="numeric" name="Idade" id="Idade" class="inINf" >
-                    <br>
-                    <p>Tipo de contato: </p>
-                    <label for="">whatsapp</label>
-                    <input type="radio" name="fav_html" id="html" value="HTML">
-                    <label for="">Discord</label>
-                    <input type="radio" name="fav_html" id="html" value="HTML">
-                    <label for="">email</label>
-                    <input type="radio" name="fav_html" id="html" value="HTML">
-                    <br>    
-                    <button type="submit" class="bot">Enviar</button>
-                    <button type="reset" class="bot">Limpar</button>
+                    <label for="nome">Escreva seu nome completo</label>
+                    <input type="text" name="name" id="nome" class="inINf" required minlength="8" maxlength="50">
+                    
+                    <label for="email">Escreva seu email</label>
+                    <input type="email" name="email" id="email" class="inINf" required>
+                    
+                    <label for="fone">Telefone</label>
+                    <input type="text" name="fone" id="fone" class="inINf" required>
+                    
+                    <label for="mensagem">Escreva sua mensagem</label>
+                    <textarea id="w3review" name="w3review" rows="4" cols="50" required> Escreva seu comentario</textarea>
+                    
+                    <label for="idade">Qual sua idade</label>
+                    <input type="numerico" name="idade" id="idade" class="inINf">
+                    
+                    <label for="contato">Contato</label>
+                    <input type="text" name="tp_contato" id="contato">
+                    
+                    <p>Tipo de contato:</p>
+                    <input type="radio" id="email" name="tipo_contato" value="email">
+                    <label for="email">email</label><br>
+
+                    <input type="radio" id="what" name="tipo_contato" value="what">
+                    <label for="what">Whatzap</label><br><br>
+ 
+                    <button type="submit" class="botao">Enviar</button>
+                    <button type="reset" class="botao">Limpar</button>
                 </form>
             </td>
-
-            <td class="tabGrid">
+            <td class="tab_grid">
             <table>
-                <thead class="cabInf">
+                <thead class="tab_grid"> <!-- Table Cabesalho -->
                     <tr>
-                        <th>Nome</th>
-                        <th>Gmail</th>
-                        <th>Phone</th>
-                        <th>Mensagem</th>
-                        <th>Idade</th>
-                        <th>método de contato</th>
+                        <th>nome</th>
+                        <th>email</th>
+                        <th>fone</th>
+                        <th>mensagem</th>
+                        <th>idade</th>
+                        <th>tipo de contato</th>
                         <th>Edit/del</th>
                     </tr>
                 </thead>
-                    <tbody>
-                        <tr>
+                <!-- <tbody> Corpo da tabela
+                    <tr>
                         <td class="campo"></td>
                         <td class="campo"></td>
                         <td class="campo"></td>
                         <td class="campo"></td>
                         <td class="campo"></td>
-                        <td class="campo"></td>
-                        <td class="edt/del">
-                            <input type="text" name="edicao" id="edicao">
+                        <td class="edt_del">
+                            <input type="text" name="edit" id="edit">
                             <input type="text" name="delete" id="delete">
                         </td>
-                        </tr>
-                    </tbody>
+                    </tr>
+                </tbody> -->
                 </table>
             </td>
         </tr>
     </table>
-    <script type="text/javascript" src="form.js"></script>
+    <script type="text/javascript" src="Formulario.js"></script>
 </body>
 </html>
